@@ -52,7 +52,8 @@ const About = () => {
           <p>
             I love anime and reading books about fantasy fiction.
           </p>
-          <p>If you are more interested with my experience download my <Link className="flat-button" to={resume} target="_blank" download>resume</Link> </p>
+          <p>If you are more interested with my experience download my  </p>
+          <p> <Link className="flat-button" to={resume} target="_blank" download>resume</Link> </p>
 
         </div>
 
