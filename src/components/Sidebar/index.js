@@ -40,15 +40,17 @@ const Sidebar = () => {
           >
             <FontAwesomeIcon icon={faEnvelope} color="#4d4d4e" />
           </NavLink>
-          <NavLink
-            activeclassname="active"
-            className="contact-link"
-            to="https://alikaner.itch.io/"
-          >
-            <FontAwesomeIcon icon={faEnvelope} color="#4d4d4e" />
-          </NavLink>
         </nav>
         <ul>
+              <li>
+            <a
+              href="https://alikaner.itch.io/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <img style={{filter: 'invert(1)'}} src={itchio} width="24" alt="itch.io" />
+            </a>
+          </li>
           <li>
             <a
               href="https://www.linkedin.com/in/alikaner/"
@@ -67,15 +69,7 @@ const Sidebar = () => {
               <FontAwesomeIcon icon={faGithub} color="#b9b9b9" />
             </a>
           </li>
-          <li>
-            <a
-              href="https://alikaner.itch.io/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <img style={{filter: 'invert(1)'}} src={itchio} width="24" alt="itch.io" />
-            </a>
-          </li>
+          
         </ul>
       </div>
     </>
