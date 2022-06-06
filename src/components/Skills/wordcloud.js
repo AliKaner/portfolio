@@ -17,7 +17,7 @@ const WordCloud = () => {
         'C++'
     ]
     const options = {
-        radius: 300,
+        radius: 220,
         // animation speed
         // slow, normal, fast
         maxSpeed: 'fast',
