@@ -26,7 +26,6 @@ const Sidebar = () => {
           <NavLink activeclassname="active" className="about-link" to="/about">
             <FontAwesomeIcon icon={faUser} color="#4d4d4e" />
           </NavLink>
-
           <NavLink
             activeclassname="active"
             className="skills-link"
@@ -34,11 +33,17 @@ const Sidebar = () => {
           >
             <FontAwesomeIcon icon={faLaptopCode} color="#4d4d4e" />
           </NavLink>
-
           <NavLink
             activeclassname="active"
             className="contact-link"
             to="/contact"
+          >
+            <FontAwesomeIcon icon={faEnvelope} color="#4d4d4e" />
+          </NavLink>
+          <NavLink
+            activeclassname="active"
+            className="contact-link"
+            to="https://alikaner.itch.io/"
           >
             <FontAwesomeIcon icon={faEnvelope} color="#4d4d4e" />
           </NavLink>
