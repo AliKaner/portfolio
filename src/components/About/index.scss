@@ -93,19 +93,19 @@ $cube-face-background: indigo;
 }
 
 .flat-button {
-  color: #260142;
+  color: #FFD700;
   font-weight: 600;
   font-family: sans-serif;
   text-decoration: none;
   padding: 5px 10px;
-  border: 2px solid #260142;
+  border: 2px solid #FFD700;
   animation: fadeInAnimation 1s 1.8s backwards;
   white-space: nowrap;
   border-radius: 0.8rem;
   transition: all 0.6s ease-out;
 
   &:hover {
-    background: #260142;
+    background: #FFD700;
     color: rgb(0, 0, 0);
   }
 }
