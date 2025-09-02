@@ -1,0 +1,96 @@
+{
+  "socialMedia": {
+    "subtitle": "You can follow me on Letterboxd, Goodreads and Steam",
+    "links": [
+      {
+        "platform": "Letterboxd",
+        "url": "https://letterboxd.com/Ali_Kaner/",
+        "icon": "🎬"
+      },
+      {
+        "platform": "Goodreads",
+        "url": "https://www.goodreads.com/user/show/167600396?ref=nav_profile_l",
+        "icon": "📚"
+      },
+      {
+        "platform": "Steam",
+        "url": "https://steamcommunity.com/id/AliKaner/",
+        "icon": "🎮"
+      }
+    ]
+  },
+  "favorites": [
+    {
+      "title": "📚 My Favorite Books 📚",
+      "img": "/images/books.png",
+      "link": "/books",
+      "subtitle": "You can follow me on Goodreads",
+      "subtitleLink": "https://www.goodreads.com/user/show/167600396?ref=nav_profile_l",
+      "items": [
+        {
+          "title": "DUNE",
+          "img": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1555447414i/44767458.jpg",
+          "link": "https://www.goodreads.com/book/show/44767458-dune"
+        },
+        {
+          "title": "The Silmarillion",
+          "img": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1610045590i/7332.jpg",
+          "link": "https://www.goodreads.com/book/show/7332.The_Silmarillion"
+        },
+        {
+          "title": "L'Apothicaire",
+          "img": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1328620877i/12791385.jpg",
+          "link": "https://www.goodreads.com/book/show/12791385-l-apothicaire"
+        }
+      ]
+    },
+    {
+      "title": "🎬 My Favorite Movies 🎬",
+      "img": "/images/movies.png",
+      "link": "/movies",
+      "subtitle": "You can follow me on Letterboxd",
+      "subtitleLink": "https://letterboxd.com/Ali_Kaner/",
+      "items": [
+        {
+          "title": "The Lord Of The Rings",
+          "img": "https://a.ltrbxd.com/resized/sm/upload/3t/vq/0u/m6/1tX9ZlgVvWjAQhMs1vAfsYpi7VK-0-230-0-345-crop.jpg?v=30bbb824e1",
+          "link": "https://letterboxd.com/film/the-lord-of-the-rings-the-fellowship-of-the-ring/"
+        },
+        {
+          "title": "Akira",
+          "img": "https://m.media-amazon.com/images/M/MV5BYWUxMGRhZDQtMTBmMi00N2IxLWE5NmYtMDMyMWExODAwNWYzXkEyXkFqcGc@._V1_.jpg",
+          "link": "https://letterboxd.com/film/akira/"
+        },
+        {
+          "title": "The Best Offer",
+          "img": "https://a.ltrbxd.com/resized/film-poster/1/1/4/6/5/7/114657-the-best-offer-0-230-0-345-crop.jpg?v=fe447f37bd",
+          "link": "https://letterboxd.com/film/the-best-offer/"
+        }
+      ]
+    },
+    {
+      "title": "🎮 My Favorite Games 🎮",
+      "img": "/images/games.png",
+      "link": "/games",
+      "subtitle": "You can follow me on Steam",
+      "subtitleLink": "https://steamcommunity.com/id/AliKaner/",
+      "items": [
+        {
+          "title": "Baldur's Gate 3",
+          "img": "https://upload.wikimedia.org/wikipedia/tr/1/12/Baldur%27s_Gate_3_cover_art.jpg",
+          "link": "https://store.steampowered.com/app/1086940/Baldurs_Gate_3/"
+        },
+        {
+          "title": "Elden Ring",
+          "img": "https://m.media-amazon.com/images/M/MV5BZGQxMjYyOTUtNjYyMC00NzdmLWI4YmYtMDhiODU3Njc5ZDJkXkEyXkFqcGc@._V1_QL75_UX190_CR0,2,190,281_.jpg",
+          "link": "https://store.steampowered.com/app/1245620/ELDEN_RING/?l=turkish&t=1703548800"
+        },
+        {
+          "title": "Age of Empires II: Definitive Edition",
+          "img": "https://upload.wikimedia.org/wikipedia/en/4/45/Age_of_Empires_II_Definitive_Edition_cover_art.jpeg",
+          "link": "https://store.steampowered.com/app/813780/Age_of_Empires_II_Definitive_Edition"
+        }
+      ]
+    }
+  ]
+}

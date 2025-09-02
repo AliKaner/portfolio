@@ -1,0 +1,109 @@
+@import "../../../styles/variables";
+@import "../../../styles/mixins";
+
+.contactForm {
+  @include card;
+  padding: $spacing-xl;
+  height: fit-content;
+
+  h2 {
+    font-size: $font-size-xl;
+    font-weight: 600;
+    color: $dark-color;
+    margin-bottom: $spacing-sm;
+    text-align: center;
+  }
+
+  .description {
+    color: $secondary-color;
+    text-align: center;
+    margin-bottom: $spacing-lg;
+    line-height: 1.6;
+  }
+}
+
+.form {
+  @include flex-column;
+  gap: $spacing-md;
+}
+
+.formRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: $spacing-md;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.editorContainer {
+  @include flex-column;
+  gap: $spacing-sm;
+
+  .label {
+    font-weight: 500;
+    color: $dark-color;
+    font-size: $font-size-sm;
+  }
+}
+
+.textarea {
+  min-height: 200px;
+  border-radius: $border-radius;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: white;
+  padding: $spacing-md;
+  font-size: $font-size-base;
+  line-height: 1.6;
+  resize: vertical;
+  font-family: inherit;
+
+  &:focus {
+    outline: none;
+    border-color: $primary-color;
+    box-shadow: 0 0 0 0.2rem rgba($primary-color, 0.25);
+  }
+
+  &::placeholder {
+    color: $secondary-color;
+  }
+}
+
+.submitButton {
+  margin-top: $spacing-md;
+  width: 100%;
+  padding: $spacing-md;
+  font-size: $font-size-base;
+  font-weight: 500;
+}
+
+.success {
+  background-color: rgba($success-color, 0.1);
+  border: 1px solid rgba($success-color, 0.3);
+  color: $success-color;
+  padding: $spacing-md;
+  border-radius: $border-radius;
+  text-align: center;
+
+  p {
+    margin: 0;
+    font-size: $font-size-sm;
+    line-height: 1.5;
+  }
+}
+
+.error {
+  background-color: rgba($danger-color, 0.1);
+  border: 1px solid rgba($danger-color, 0.3);
+  color: $danger-color;
+  padding: $spacing-md;
+  border-radius: $border-radius;
+  text-align: center;
+
+  p {
+    margin: 0;
+    font-size: $font-size-sm;
+    line-height: 1.5;
+  }
+}

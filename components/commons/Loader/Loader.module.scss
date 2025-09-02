@@ -1,0 +1,51 @@
+@import "../../../styles/variables";
+@import "../../../styles/mixins";
+
+.loader {
+  @include flex-center;
+
+  &.sm .spinner {
+    width: 16px;
+    height: 16px;
+  }
+
+  &.md .spinner {
+    width: 24px;
+    height: 24px;
+  }
+
+  &.lg .spinner {
+    width: 32px;
+    height: 32px;
+  }
+
+  &.primary .spinner {
+    border-color: $primary-color;
+    border-top-color: transparent;
+  }
+
+  &.secondary .spinner {
+    border-color: $secondary-color;
+    border-top-color: transparent;
+  }
+
+  &.white .spinner {
+    border-color: white;
+    border-top-color: transparent;
+  }
+}
+
+.spinner {
+  border: 2px solid;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

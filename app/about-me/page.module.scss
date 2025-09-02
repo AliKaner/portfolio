@@ -1,0 +1,155 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+.page {
+  padding: $spacing-xl 0;
+}
+
+.aboutCard {
+  background-color: $surface-color;
+  border-radius: $border-radius-lg;
+  box-shadow: 0 8px 30px rgba(139, 92, 246, 0.2);
+  border: 1px solid rgba(139, 92, 246, 0.3);
+  padding: $spacing-xl;
+  margin-bottom: $spacing-xl;
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, $primary-color, $info-color);
+  }
+}
+
+.cardContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: $spacing-xl;
+  margin-bottom: $spacing-lg;
+}
+
+.introduction {
+  flex: 1;
+
+  h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: $text-color;
+    margin: 0 0 $spacing-md 0;
+  }
+
+  p {
+    font-size: $font-size-lg;
+    color: $text-muted;
+    line-height: 1.6;
+    margin: 0;
+  }
+}
+
+.cvDownload {
+  flex-shrink: 0;
+}
+
+.downloadButton {
+  @include button-base;
+  background: linear-gradient(135deg, $primary-color, $info-color);
+  color: white;
+  padding: $spacing-md $spacing-xl;
+  font-size: $font-size-lg;
+  font-weight: 600;
+  border-radius: $border-radius-lg;
+  box-shadow: 0 4px 20px rgba(139, 92, 246, 0.3);
+  transition: $transition-base;
+  border: none;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(139, 92, 246, 0.4);
+  }
+}
+
+.socialMedia {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: $spacing-lg;
+
+  h3 {
+    font-size: $font-size-lg;
+    font-weight: 600;
+    color: $primary-color;
+    margin: 0 0 $spacing-md 0;
+  }
+}
+
+.socialLinks {
+  display: flex;
+  gap: $spacing-md;
+  flex-wrap: wrap;
+}
+
+.socialLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $text-color;
+  text-decoration: none;
+  padding: $spacing-sm;
+  border-radius: $border-radius;
+  transition: $transition-base;
+
+  img {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+  }
+
+  &:hover {
+    background-color: rgba(139, 92, 246, 0.2);
+    color: $primary-color;
+    transform: translateY(-1px);
+  }
+}
+
+.favoritesSection {
+  margin-bottom: $spacing-xl;
+}
+
+// Responsive design
+@media (max-width: 768px) {
+  .aboutCard {
+    padding: $spacing-lg;
+  }
+
+  .cardContent {
+    flex-direction: column;
+    gap: $spacing-lg;
+    text-align: center;
+  }
+
+  .introduction {
+    text-align: center;
+
+    h2 {
+      font-size: 1.75rem;
+    }
+  }
+
+  .downloadButton {
+    padding: $spacing-sm $spacing-lg;
+    font-size: $font-size-base;
+  }
+
+  .socialLinks {
+    justify-content: center;
+    gap: $spacing-sm;
+  }
+
+  .socialLink {
+    padding: $spacing-xs;
+  }
+}

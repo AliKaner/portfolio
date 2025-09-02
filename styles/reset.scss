@@ -1,0 +1,1050 @@
+/* CSS Reset - Normalize browser defaults */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin and padding */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Remove list styles on ul, ol elements */
+ul,
+ol {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Remove default button styles */
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+/* Remove default input styles */
+input,
+textarea {
+  border: none;
+  outline: none;
+  background: none;
+}
+
+/* Remove default table styles */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Remove default fieldset styles */
+fieldset {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Remove default legend styles */
+legend {
+  padding: 0;
+}
+
+/* Remove default details styles */
+details {
+  display: block;
+}
+
+/* Remove default summary styles */
+summary {
+  display: list-item;
+}
+
+/* Remove default template styles */
+template {
+  display: none;
+}
+
+/* Remove default hidden styles */
+[hidden] {
+  display: none !important;
+}
+
+/* Remove default focus styles for mouse users */
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* Restore focus styles for keyboard users */
+:focus-visible {
+  outline: 2px solid #007acc;
+  outline-offset: 2px;
+}
+
+/* Remove default selection styles */
+::selection {
+  background-color: #007acc;
+  color: white;
+}
+
+/* Remove default placeholder styles */
+::placeholder {
+  color: #999;
+  opacity: 1;
+}
+
+/* Remove default autofill styles */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px white inset !important;
+}
+
+/* Remove default scrollbar styles */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
+
+/* Remove default text selection styles */
+* {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Allow text selection on specific elements */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span,
+div,
+a,
+button,
+input,
+textarea,
+label {
+  -webkit-user-select: text;
+  -khtml-user-select: text;
+  -moz-user-select: text;
+  -ms-user-select: text;
+  user-select: text;
+}
+
+/* Remove default form styles */
+form {
+  margin: 0;
+}
+
+/* Remove default fieldset styles */
+fieldset {
+  min-width: 0;
+}
+
+/* Remove default legend styles */
+legend {
+  box-sizing: border-box;
+  color: inherit;
+  display: table;
+  max-width: 100%;
+  white-space: normal;
+}
+
+/* Remove default progress styles */
+progress {
+  vertical-align: baseline;
+}
+
+/* Remove default textarea styles */
+textarea {
+  overflow: auto;
+  vertical-align: top;
+}
+
+/* Remove default checkbox and radio styles */
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+/* Remove default number input styles */
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/* Remove default search input styles */
+[type="search"] {
+  -webkit-appearance: textfield;
+  outline-offset: -2px;
+}
+
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/* Remove default file input styles */
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  font: inherit;
+}
+
+/* Remove default color input styles */
+::-webkit-color-swatch-wrapper {
+  padding: 0;
+}
+
+::-webkit-color-swatch {
+  border: 0;
+  border-radius: 0;
+}
+
+/* Remove default date input styles */
+::-webkit-datetime-edit {
+  overflow: visible;
+  padding: 0;
+}
+
+::-webkit-datetime-edit-fields-wrapper {
+  padding: 0;
+}
+
+::-webkit-datetime-edit-text {
+  padding: 0 0.2em;
+}
+
+::-webkit-datetime-edit-month-field,
+::-webkit-datetime-edit-day-field,
+::-webkit-datetime-edit-year-field {
+  padding: 0 0.2em;
+}
+
+::-webkit-datetime-edit-hour-field,
+::-webkit-datetime-edit-minute-field,
+::-webkit-datetime-edit-second-field {
+  padding: 0 0.2em;
+}
+
+::-webkit-datetime-edit-ampm-field {
+  padding: 0 0.2em;
+}
+
+/* Remove default time input styles */
+::-webkit-datetime-edit-year-field[aria-valuenow],
+::-webkit-datetime-edit-month-field[aria-valuenow],
+::-webkit-datetime-edit-day-field[aria-valuenow] {
+  direction: ltr;
+}
+
+::-webkit-datetime-edit-text[aria-valuenow] {
+  direction: ltr;
+}
+
+/* Remove default month input styles */
+::-webkit-datetime-edit-month-field[aria-valuenow] {
+  direction: ltr;
+}
+
+::-webkit-datetime-edit-day-field[aria-valuenow] {
+  direction: ltr;
+}
+
+::-webkit-datetime-edit-year-field[aria-valuenow] {
+  direction: ltr;
+}
+
+/* Remove default week input styles */
+::-webkit-datetime-edit-week-field[aria-valuenow] {
+  direction: ltr;
+}
+
+/* Remove default datetime-local input styles */
+::-webkit-datetime-edit-fields-wrapper {
+  display: flex;
+}
+
+::-webkit-datetime-edit-text {
+  padding: 0 0.2em;
+}
+
+::-webkit-datetime-edit-hour-field,
+::-webkit-datetime-edit-minute-field,
+::-webkit-datetime-edit-second-field {
+  padding: 0 0.2em;
+}
+
+::-webkit-datetime-edit-ampm-field {
+  padding: 0 0.2em;
+}
+
+/* Remove default range input styles */
+::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  background: #007acc;
+  border-radius: 50%;
+  cursor: pointer;
+  height: 16px;
+  width: 16px;
+}
+
+::-webkit-slider-track {
+  background: #ddd;
+  border-radius: 4px;
+  height: 4px;
+}
+
+/* Remove default meter styles */
+meter {
+  -webkit-appearance: revert;
+  appearance: revert;
+}
+
+/* Remove default progress styles */
+progress {
+  -webkit-appearance: revert;
+  appearance: revert;
+}
+
+/* Remove default select styles */
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23007ACC%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.4-12.8z%22%2F%3E%3C%2Fsvg%3E");
+  background-position: right 8px center;
+  background-repeat: no-repeat;
+  background-size: 12px auto;
+  padding-right: 32px;
+}
+
+/* Remove default optgroup styles */
+optgroup {
+  font-weight: bold;
+}
+
+/* Remove default option styles */
+option {
+  font-weight: normal;
+}
+
+/* Remove default datalist styles */
+datalist {
+  display: none;
+}
+
+/* Remove default output styles */
+output {
+  display: inline;
+}
+
+/* Remove default keygen styles */
+keygen {
+  display: none;
+}
+
+/* Remove default isindex styles */
+isindex {
+  display: none;
+}
+
+/* Remove default xmp styles */
+xmp {
+  font-family: monospace;
+  white-space: pre;
+}
+
+/* Remove default plaintext styles */
+plaintext {
+  font-family: monospace;
+  white-space: pre;
+}
+
+/* Remove default listing styles */
+listing {
+  font-family: monospace;
+  white-space: pre;
+}
+
+/* Remove default tt styles */
+tt {
+  font-family: monospace;
+}
+
+/* Remove default code styles */
+code {
+  font-family: monospace;
+}
+
+/* Remove default kbd styles */
+kbd {
+  font-family: monospace;
+}
+
+/* Remove default samp styles */
+samp {
+  font-family: monospace;
+}
+
+/* Remove default pre styles */
+pre {
+  font-family: monospace;
+  white-space: pre;
+}
+
+/* Remove default mark styles */
+mark {
+  background-color: #ff0;
+  color: #000;
+}
+
+/* Remove default small styles */
+small {
+  font-size: 80%;
+}
+
+/* Remove default sub styles */
+sub {
+  bottom: -0.25em;
+}
+
+/* Remove default sup styles */
+sup {
+  top: -0.5em;
+}
+
+/* Remove default b styles */
+b {
+  font-weight: bold;
+}
+
+/* Remove default strong styles */
+strong {
+  font-weight: bold;
+}
+
+/* Remove default i styles */
+i {
+  font-style: italic;
+}
+
+/* Remove default em styles */
+em {
+  font-style: italic;
+}
+
+/* Remove default u styles */
+u {
+  text-decoration: underline;
+}
+
+/* Remove default s styles */
+s {
+  text-decoration: line-through;
+}
+
+/* Remove default del styles */
+del {
+  text-decoration: line-through;
+}
+
+/* Remove default ins styles */
+ins {
+  text-decoration: underline;
+}
+
+/* Remove default abbr styles */
+abbr[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+
+/* Remove default acronym styles */
+acronym[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+
+/* Remove default dfn styles */
+dfn {
+  font-style: italic;
+}
+
+/* Remove default cite styles */
+cite {
+  font-style: italic;
+}
+
+/* Remove default var styles */
+var {
+  font-style: italic;
+}
+
+/* Remove default address styles */
+address {
+  font-style: normal;
+}
+
+/* Remove default blockquote styles */
+blockquote {
+  margin: 0;
+  padding: 0;
+}
+
+/* Remove default q styles */
+q {
+  quotes: none;
+}
+
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+/* Remove default hr styles */
+hr {
+  border: 0;
+  border-top: 1px solid #ccc;
+  height: 1px;
+  margin: 1em 0;
+  padding: 0;
+}
+
+/* Remove default dl styles */
+dl {
+  margin: 0;
+}
+
+/* Remove default dt styles */
+dt {
+  font-weight: bold;
+}
+
+/* Remove default dd styles */
+dd {
+  margin: 0;
+}
+
+/* Remove default figure styles */
+figure {
+  margin: 0;
+}
+
+/* Remove default figcaption styles */
+figcaption {
+  display: block;
+}
+
+/* Remove default main styles */
+main {
+  display: block;
+}
+
+/* Remove default article styles */
+article {
+  display: block;
+}
+
+/* Remove default aside styles */
+aside {
+  display: block;
+}
+
+/* Remove default section styles */
+section {
+  display: block;
+}
+
+/* Remove default nav styles */
+nav {
+  display: block;
+}
+
+/* Remove default header styles */
+header {
+  display: block;
+}
+
+/* Remove default footer styles */
+footer {
+  display: block;
+}
+
+/* Remove default hgroup styles */
+hgroup {
+  display: block;
+}
+
+/* Remove default address styles */
+address {
+  display: block;
+}
+
+/* Remove default time styles */
+time {
+  display: inline;
+}
+
+/* Remove default ruby styles */
+ruby {
+  display: ruby;
+}
+
+/* Remove default rt styles */
+rt {
+  display: ruby-text;
+}
+
+/* Remove default rp styles */
+rp {
+  display: ruby-base;
+}
+
+/* Remove default bdi styles */
+bdi {
+  direction: isolate;
+}
+
+/* Remove default bdo styles */
+bdo {
+  direction: rtl;
+}
+
+/* Remove default span styles */
+span {
+  display: inline;
+}
+
+/* Remove default div styles */
+div {
+  display: block;
+}
+
+/* Remove default p styles */
+p {
+  display: block;
+  margin: 0;
+}
+
+/* Remove default h1 styles */
+h1 {
+  display: block;
+  font-size: 2em;
+  font-weight: bold;
+  margin: 0;
+}
+
+/* Remove default h2 styles */
+h2 {
+  display: block;
+  font-size: 1.5em;
+  font-weight: bold;
+  margin: 0;
+}
+
+/* Remove default h3 styles */
+h3 {
+  display: block;
+  font-size: 1.17em;
+  font-weight: bold;
+  margin: 0;
+}
+
+/* Remove default h4 styles */
+h4 {
+  display: block;
+  font-size: 1em;
+  font-weight: bold;
+  margin: 0;
+}
+
+/* Remove default h5 styles */
+h5 {
+  display: block;
+  font-size: 0.83em;
+  font-weight: bold;
+  margin: 0;
+}
+
+/* Remove default h6 styles */
+h6 {
+  display: block;
+  font-size: 0.67em;
+  font-weight: bold;
+  margin: 0;
+}
+
+/* Remove default a styles */
+a {
+  background-color: transparent;
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Remove default abbr styles */
+abbr[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+
+/* Remove default acronym styles */
+acronym[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+
+/* Remove default bdo styles */
+bdo {
+  direction: rtl;
+}
+
+/* Remove default big styles */
+big {
+  font-size: 1.17em;
+}
+
+/* Remove default center styles */
+center {
+  text-align: center;
+}
+
+/* Remove default cite styles */
+cite {
+  font-style: italic;
+}
+
+/* Remove default code styles */
+code {
+  font-family: monospace;
+}
+
+/* Remove default dfn styles */
+dfn {
+  font-style: italic;
+}
+
+/* Remove default font styles */
+font {
+  font-family: inherit;
+  font-size: inherit;
+  font-style: inherit;
+  font-variant: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+}
+
+/* Remove default ins styles */
+ins {
+  text-decoration: underline;
+}
+
+/* Remove default kbd styles */
+kbd {
+  font-family: monospace;
+}
+
+/* Remove default mark styles */
+mark {
+  background-color: #ff0;
+  color: #000;
+}
+
+/* Remove default nobr styles */
+nobr {
+  white-space: nowrap;
+}
+
+/* Remove default noframes styles */
+noframes {
+  display: none;
+}
+
+/* Remove default noscript styles */
+noscript {
+  display: none;
+}
+
+/* Remove default plaintext styles */
+plaintext {
+  font-family: monospace;
+  white-space: pre;
+}
+
+/* Remove default s styles */
+s {
+  text-decoration: line-through;
+}
+
+/* Remove default samp styles */
+samp {
+  font-family: monospace;
+}
+
+/* Remove default small styles */
+small {
+  font-size: 80%;
+}
+
+/* Remove default strike styles */
+strike {
+  text-decoration: line-through;
+}
+
+/* Remove default tt styles */
+tt {
+  font-family: monospace;
+}
+
+/* Remove default u styles */
+u {
+  text-decoration: underline;
+}
+
+/* Remove default var styles */
+var {
+  font-style: italic;
+}
+
+/* Remove default xmp styles */
+xmp {
+  font-family: monospace;
+  white-space: pre;
+}
+
+/* Remove default applet styles */
+applet {
+  display: block;
+}
+
+/* Remove default basefont styles */
+basefont {
+  font-family: serif;
+  font-size: medium;
+}
+
+/* Remove default bgsound styles */
+bgsound {
+  display: none;
+}
+
+/* Remove default dir styles */
+dir {
+  display: block;
+  list-style-type: disc;
+  margin: 1em 0;
+  padding: 0 0 0 40px;
+}
+
+/* Remove default isindex styles */
+isindex {
+  display: none;
+}
+
+/* Remove default listing styles */
+listing {
+  font-family: monospace;
+  white-space: pre;
+}
+
+/* Remove default marquee styles */
+marquee {
+  display: inline-block;
+}
+
+/* Remove default multicol styles */
+multicol {
+  display: block;
+}
+
+/* Remove default nextid styles */
+nextid {
+  display: none;
+}
+
+/* Remove default spacer styles */
+spacer {
+  display: inline;
+}
+
+/* Remove default wbr styles */
+wbr {
+  display: inline;
+}
+
+/* Remove default audio styles */
+audio {
+  display: inline-block;
+}
+
+/* Remove default canvas styles */
+canvas {
+  display: inline-block;
+}
+
+/* Remove default embed styles */
+embed {
+  display: inline-block;
+}
+
+/* Remove default iframe styles */
+iframe {
+  display: inline-block;
+}
+
+/* Remove default object styles */
+object {
+  display: inline-block;
+}
+
+/* Remove default param styles */
+param {
+  display: none;
+}
+
+/* Remove default source styles */
+source {
+  display: none;
+}
+
+/* Remove default track styles */
+track {
+  display: none;
+}
+
+/* Remove default video styles */
+video {
+  display: inline-block;
+}
+
+/* Remove default map styles */
+map {
+  display: inline;
+}
+
+/* Remove default area styles */
+area {
+  display: none;
+}
+
+/* Remove default link styles */
+link {
+  display: none;
+}
+
+/* Remove default meta styles */
+meta {
+  display: none;
+}
+
+/* Remove default script styles */
+script {
+  display: none;
+}
+
+/* Remove default style styles */
+style {
+  display: none;
+}
+
+/* Remove default title styles */
+title {
+  display: none;
+}
+
+/* Remove default base styles */
+base {
+  display: none;
+}
+
+/* Remove default head styles */
+head {
+  display: none;
+}
+
+/* Remove default html styles */
+html {
+  display: block;
+}
+
+/* Remove default body styles */
+body {
+  display: block;
+}

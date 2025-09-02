@@ -1,0 +1,71 @@
+@import "reset";
+@import "variables";
+@import "mixins";
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: $font-family-base;
+  font-size: $font-size-base;
+  line-height: 1.6;
+  color: $text-color;
+  background-color: $background-color;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 $spacing-md;
+}
+
+.page {
+  min-height: 100vh;
+  padding: $spacing-xl 0;
+}
+
+.section {
+  margin-bottom: $spacing-xl;
+}
+
+.section-title {
+  font-size: $font-size-lg;
+  font-weight: 600;
+  margin-bottom: $spacing-lg;
+  color: $text-color;
+}
+
+.loading {
+  @include flex-center;
+  padding: $spacing-xl;
+  color: $secondary-color;
+}
+
+.error {
+  color: $danger-color;
+  padding: $spacing-md;
+  background-color: rgba($danger-color, 0.1);
+  border-radius: $border-radius;
+  margin-bottom: $spacing-md;
+}
+
+.success {
+  color: $success-color;
+  padding: $spacing-md;
+  background-color: rgba($success-color, 0.1);
+  border-radius: $border-radius;
+  margin-bottom: $spacing-md;
+}
