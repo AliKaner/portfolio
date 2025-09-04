@@ -1,5 +1,5 @@
-// BlogCard component
-const BlogCard = () => {
+// ExampleComponent component
+const ExampleComponent = () => {
   // destructuring props
 
   // context hooks
@@ -17,4 +17,4 @@ const BlogCard = () => {
 };
 
 // export
-export default BlogCard;
+export default ExampleComponent;

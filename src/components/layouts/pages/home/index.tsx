@@ -1,19 +1,38 @@
+// src/components/layouts/pages/home/index.tsx
+`use client`;
+
+// HomePageContent imports
+import CategoryCard from "@/components/common/category-card";
+import styles from "./styles.module.scss";
+import CallToAction from "@/components/common/call-to-action";
+import { Category } from "@/api/categories";
+import { createClient } from "@/utils/supabase/client";
+import { cookies } from "next/headers";
+
 // HomePageContent component
-const HomePageContent = () => {
-  // destructuring props
-
-  // context hooks
-
-  // state
-
-  // effect
-
+const HomePageContent = async () => {
   // queries
+  const supabase = createClient();
 
-  // other variables/functions/handlers
+  const { data: categories } = await supabase.from("categories").select();
 
-  // render
-  return <div></div>;
+  return (
+    <div>
+      <CallToAction title="sa" description="as" />
+      <div className={styles.content}>
+        {categories &&
+          categories.map((category: Category) => (
+            <CategoryCard
+              title={category.title}
+              id={category.id}
+              path="/"
+              imageUrl={category.imageUrl}
+              key={`CategoryCard-ID-${category.id}`}
+            />
+          ))}
+      </div>
+    </div>
+  );
 };
 
 // export

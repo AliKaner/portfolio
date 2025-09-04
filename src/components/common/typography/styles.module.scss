@@ -1,0 +1,39 @@
+.container {
+  &.small {
+    font-size: 0.875rem; // 14px
+  }
+  &.medium {
+    font-size: 1rem; // 16px
+  }
+  &.large {
+    font-size: 1.25rem; // 20px
+  }
+  &.xlarge {
+    font-size: 1.5rem; // 24px
+  }
+
+  &.primary {
+    color: red;
+  }
+  &.secondary {
+    color: red;
+  }
+  &.tertiary {
+    color: red;
+  }
+
+  &.normal {
+    font-weight: 400;
+  }
+  &.bold {
+    font-weight: 700;
+  }
+
+  &.block {
+    display: block;
+    width: 100%;
+  }
+  &.inline {
+    display: inline;
+  }
+}

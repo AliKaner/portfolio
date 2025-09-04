@@ -1,17 +1,10 @@
+`use client`;
+
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import BaseLayout from "@/components/layouts/_base_layout";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { useState } from "react";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -23,12 +16,27 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const [queryClient] = useState(() => new QueryClient());
+
+  // destructuring props
+
+  // context hooks
+
+  // state
+
+  // effect
+
+  // queries
+
+  // other variables/functions/handlers
+
+  // render
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        <BaseLayout>{children}</BaseLayout>
+      <body>
+        <QueryClientProvider client={queryClient}>
+          <BaseLayout>{children}</BaseLayout>
+        </QueryClientProvider>
       </body>
     </html>
   );
