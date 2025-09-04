@@ -1,0 +1,36 @@
+@import "../../../styles/variables";
+@import "../../../styles/mixins";
+
+.todoForm {
+  @include card;
+  margin-bottom: $spacing-xl;
+}
+
+.title {
+  font-size: $font-size-lg;
+  font-weight: 600;
+  margin-bottom: $spacing-lg;
+  color: $dark-color;
+}
+
+.form {
+  @include flex-column;
+  gap: $spacing-md;
+}
+
+.input {
+  flex: 1;
+}
+
+.button {
+  align-self: flex-start;
+}
+
+.error {
+  margin-top: $spacing-md;
+  padding: $spacing-sm;
+  background-color: rgba($danger-color, 0.1);
+  color: $danger-color;
+  border-radius: $border-radius;
+  font-size: $font-size-sm;
+}

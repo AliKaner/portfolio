@@ -1,0 +1,51 @@
+@import "../../../styles/variables";
+@import "../../../styles/mixins";
+
+.todoList {
+  @include card;
+  margin-bottom: $spacing-xl;
+}
+
+.title {
+  font-size: $font-size-lg;
+  font-weight: 600;
+  margin-bottom: $spacing-lg;
+  color: $dark-color;
+}
+
+.list {
+  @include flex-column;
+  gap: $spacing-md;
+}
+
+.loading {
+  @include flex-center;
+  padding: $spacing-xl;
+}
+
+.error {
+  @include card;
+  color: $danger-color;
+  text-align: center;
+
+  button {
+    margin-top: $spacing-md;
+    padding: $spacing-sm $spacing-md;
+    background-color: $danger-color;
+    color: white;
+    border: none;
+    border-radius: $border-radius;
+    cursor: pointer;
+
+    &:hover {
+      background-color: darken($danger-color, 10%);
+    }
+  }
+}
+
+.empty {
+  @include card;
+  text-align: center;
+  color: $secondary-color;
+  font-style: italic;
+}

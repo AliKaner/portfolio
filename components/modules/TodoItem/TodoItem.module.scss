@@ -1,0 +1,47 @@
+@import "../../../styles/variables";
+@import "../../../styles/mixins";
+
+.todoItem {
+  @include flex-between;
+  padding: $spacing-md;
+  background-color: white;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: $border-radius;
+  transition: $transition-base;
+
+  &:hover {
+    box-shadow: $box-shadow;
+  }
+
+  &.completed {
+    opacity: 0.6;
+
+    .title {
+      text-decoration: line-through;
+      color: $secondary-color;
+    }
+  }
+}
+
+.content {
+  @include flex-center;
+  gap: $spacing-sm;
+  flex: 1;
+}
+
+.checkbox {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+}
+
+.title {
+  font-size: $font-size-base;
+  color: $dark-color;
+  word-break: break-word;
+}
+
+.actions {
+  @include flex-center;
+  gap: $spacing-sm;
+}

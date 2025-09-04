@@ -1,0 +1,241 @@
+@import "../../../../styles/variables";
+@import "../../../../styles/mixins";
+
+.page {
+  padding: $spacing-xl 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: $spacing-xl;
+
+  h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: $text-color;
+    margin-bottom: $spacing-sm;
+  }
+
+  p {
+    font-size: $font-size-lg;
+    color: $text-muted;
+  }
+}
+
+.calculatorContainer {
+  display: flex;
+  gap: $spacing-lg;
+  max-width: 900px;
+  width: 100%;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
+}
+
+.calculator {
+  background: #1a1a1a;
+  border: 1px solid #333333;
+  border-radius: $border-radius-lg;
+  padding: $spacing-lg;
+  box-shadow: $box-shadow-lg;
+  max-width: 450px;
+  width: 100%;
+  flex-shrink: 0;
+}
+
+.display {
+  background: #0a0a0a;
+  border: 1px solid #333333;
+  border-radius: $border-radius;
+  padding: $spacing-md;
+  margin-bottom: $spacing-lg;
+  text-align: right;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.equation {
+  font-size: $font-size-sm;
+  color: $text-muted;
+  margin-bottom: $spacing-xs;
+  height: 20px;
+  overflow: hidden;
+}
+
+.current {
+  font-size: 2rem;
+  font-weight: 600;
+  color: $text-color;
+  line-height: 1;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: $spacing-sm;
+  grid-template-areas:
+    "clear paren square sqrt"
+    "seven eight nine divide"
+    "four five six multiply"
+    "one two three subtract"
+    "zero decimal equal add";
+}
+
+.buttons button {
+  padding: $spacing-lg;
+  border: 1px solid #333333;
+  border-radius: $border-radius;
+  background: #0a0a0a;
+  color: $text-color;
+  font-size: $font-size-lg;
+  font-weight: 500;
+  cursor: pointer;
+  transition: $transition-base;
+  min-height: 50px;
+
+  &:hover {
+    background: #2a2a2a;
+  }
+
+  &:active {
+    transform: scale(0.95);
+  }
+}
+
+.clear {
+  background: #ef4444 !important;
+  color: white !important;
+  grid-area: clear;
+
+  &:hover {
+    background: #dc2626 !important;
+  }
+}
+
+.function {
+  background: #8b5cf6 !important;
+  color: white !important;
+  font-size: $font-size-sm;
+
+  &:hover {
+    background: #7c3aed !important;
+  }
+}
+
+.operator {
+  background: #3b82f6 !important;
+  color: white !important;
+
+  &:hover {
+    background: #2563eb !important;
+  }
+}
+
+.equal {
+  background: #10b981 !important;
+  color: white !important;
+
+  &:hover {
+    background: #059669 !important;
+  }
+}
+
+.zero {
+  grid-area: zero;
+}
+
+.log {
+  background: #1a1a1a;
+  border: 1px solid #333333;
+  border-radius: $border-radius-lg;
+  padding: $spacing-lg;
+  box-shadow: $box-shadow-lg;
+  min-width: 300px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  animation: fadeInScale 0.4s ease-out;
+}
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.logHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: $spacing-md;
+  padding-bottom: $spacing-sm;
+  border-bottom: 1px solid #333333;
+
+  h3 {
+    color: $text-color;
+    font-size: $font-size-lg;
+    font-weight: 600;
+    margin: 0;
+  }
+}
+
+.clearLog {
+  background: #ef4444;
+  color: white;
+  border: none;
+  border-radius: $border-radius-sm;
+  padding: $spacing-xs $spacing-sm;
+  font-size: $font-size-sm;
+  cursor: pointer;
+  transition: $transition-base;
+
+  &:hover {
+    background: #dc2626;
+  }
+}
+
+.logContent {
+  flex: 1;
+  overflow-y: auto;
+  max-height: 400px;
+}
+
+.logEntry {
+  padding: $spacing-sm;
+  border-bottom: 1px solid #333333;
+  color: $text-color;
+  font-size: $font-size-sm;
+  font-family: "Courier New", monospace;
+  animation: slideInFromRight 0.3s ease-out forwards;
+  opacity: 0;
+  transform: translateX(20px);
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+@keyframes slideInFromRight {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.emptyLog {
+  color: $text-muted;
+  font-style: italic;
+  text-align: center;
+  padding: $spacing-lg;
+}
